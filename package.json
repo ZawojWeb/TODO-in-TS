@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ZawojWeb/TODO-in-TS/issues"
   },
-  "homepage": "https://github.com/ZawojWeb/TODO-in-TS#readme"
+  "homepage": "https://github.com/ZawojWeb/TODO-in-TS#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }

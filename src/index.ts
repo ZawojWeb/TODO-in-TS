@@ -13,11 +13,11 @@ function displayTodoList(): void {
 }
 
 enum Commands {
-  Quit = "Koniec",
-  Toggle = "Pokaż lub ukryj wykonane",
-  ADD = "Dodaj zadanie",
-  Complete = "Zaznacz jako wykonane",
-  Delete = "Usuń wykonane zadania",
+  Quit = "Exit",
+  Toggle = "Show or hide completed",
+  ADD = "Add task",
+  Complete = "Mark as complete",
+  Delete = "Delete completed tasks",
 }
 
 function promtUser(): void {
@@ -64,7 +64,7 @@ function promtAdd(): void {
     .prompt({
       type: "input",
       name: "add",
-      message: "Podaj zadanie: ",
+      message: "Enter the task: ",
     })
     .then((answers) => {
       if (answers["add"] !== "") {
@@ -81,7 +81,7 @@ function promtComplete(): void {
     .prompt({
       type: "checkbox",
       name: "complete",
-      message: "Zaznacz zadanie jako wykonane",
+      message: "Mark the task as completed",
       choices: collection.getTodoItems(showCompleted).map((item) => ({ name: item.task, value: item.id, checked: item.complete })),
     })
     .then((answers) => {

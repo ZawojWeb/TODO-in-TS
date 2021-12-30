@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/ZawojWeb/TODO-in-TS#readme",
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.1.3",
+    "@types/lowdb": "^1.0.11"
   }
 }

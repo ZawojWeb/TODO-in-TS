@@ -25,6 +25,7 @@ class TodoCollection {
     }
     markComplete(id, complete) {
         const todoItem = this.getTodoById(id);
+        console.log(todoItem.task);
         if (todoItem) {
             todoItem.complete = complete;
         }

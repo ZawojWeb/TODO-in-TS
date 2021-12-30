@@ -11,14 +11,14 @@ function displayTodoList() {
 }
 var Commands;
 (function (Commands) {
-    Commands["Quit"] = "Koniec";
-    Commands["Toggle"] = "Poka\u017C lub ukryj wykonane";
-    Commands["ADD"] = "Dodaj zadanie";
-    Commands["Complete"] = "Zaznacz jako wykonane";
-    Commands["Delete"] = "Usu\u0144 wykonane zadania";
+    Commands["Quit"] = "Exit";
+    Commands["Toggle"] = "Show or hide completed";
+    Commands["ADD"] = "Add task";
+    Commands["Complete"] = "Mark as complete";
+    Commands["Delete"] = "Delete completed tasks";
 })(Commands || (Commands = {}));
 function promtUser() {
-    //console.clear()
+    console.clear();
     displayTodoList();
     inquirer
         .prompt({
@@ -55,12 +55,12 @@ function promtUser() {
 }
 promtUser();
 function promtAdd() {
-    //console.clear()
+    console.clear();
     inquirer
         .prompt({
         type: "input",
         name: "add",
-        message: "Podaj zadanie: ",
+        message: "Enter the task: ",
     })
         .then((answers) => {
         if (answers["add"] !== "") {
@@ -70,12 +70,12 @@ function promtAdd() {
     });
 }
 function promtComplete() {
-    //console.clear()
+    console.clear();
     inquirer
         .prompt({
         type: "checkbox",
         name: "complete",
-        message: "Zaznacz zadanie jako wykonane",
+        message: "Mark the task as completed",
         choices: collection.getTodoItems(showCompleted).map((item) => ({ name: item.task, value: item.id, checked: item.complete })),
     })
         .then((answers) => {

@@ -13,27 +13,7 @@
     {
       "id": 3,
       "task": "Go programing",
-      "complete": true
-    },
-    {
-      "id": 4,
-      "task": "Call to me",
       "complete": false
-    },
-    {
-      "id": 5,
-      "task": "Hej",
-      "complete": true
-    },
-    {
-      "id": 6,
-      "task": "Dupa",
-      "complete": false
-    },
-    {
-      "id": 7,
-      "task": "dasdas",
-      "complete": true
     }
   ]
 }

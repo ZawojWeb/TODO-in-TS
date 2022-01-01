@@ -12,6 +12,8 @@ function displayTodoList(): void {
   collection.getTodoItems(showCompleted).forEach((item) => item.printDetails())
 }
 
+
+
 enum Commands {
   Quit = "Exit",
   Toggle = "Show or hide completed",
